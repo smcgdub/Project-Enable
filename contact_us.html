@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Project Enable | Contact Us</title>
+
+  <!-- Email JS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Email JS initialize the SDK with our public key -->
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "QQkKHpHUngQRuJBeL",
+      });
+    })();
+  </script>
+
+  <!-- Email JS submit our contact form and send it through EmailJS -->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        emailjs.sendForm('contact_service', 'contact_form', this)
+          .then(function () {
+            alert('Message sent, thank you!');
+            document.getElementById('contact-form')
+              .reset();
+          }, function (error) {
+            alert('An error occurred, please try again.');
+          });
+      });
+    }
+  </script>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Font awesome CDN -->
+  <script src="https://kit.fontawesome.com/89d5bab957.js" crossorigin="anonymous"></script>
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+    <div class="container">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="index.html">Project Enable</a>
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <!-- Ellipsis hamburger icon -->
+        <i class="fa-solid fa-ellipsis"></i>
+
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" aria-current="page" href="who_we_are.html">Who we are</a>
+          <a class="nav-link" aria-current="page" href="what_we_do.html">| What we do</a>
+          <a class="nav-link" aria-current="page" href="why_ireland.html">| Why Ireland</a>
+          <a class="nav-link" aria-current="page" href="faq.html">| F.A.Q</a>
+          <a class="nav-link" href="#">| Follow us <i class="fa-brands fa-x-twitter"></i></a>
+          <a class="nav-link active" href="contact_us_2.html">| Contact us</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero Image -->
+  <div class="hero">
+
+    <!-- Hero text -->
+    <div class="hero-text-container py-3 animate__animated animate__fadeIn">
+
+      <!-- Hero container, row & col -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Page title -->
+            <h1 class="text-white thin-h1">Contact us</h1>
+
+            <!-- Horizontal line -->
+            <hr class="white-hr">
+
+            <!-- Email JS Form -->
+            <form id="contact-form" class="text-start">
+              <input type="hidden" name="contact_number">
+
+              <!-- Name input -->
+              <label for="user_name" class="form-label text-white mb-1">Your name:</label>
+              <input type="text" id="user_name" class="form-control rounded-0 mb-3" name="user_name"
+                placeholder="Your name" required>
+
+              <!-- Email input -->
+              <label for="user_email" class="form-label text-white mb-1">Email:</label>
+              <input type="email" id="user_email" class="form-control rounded-0" name="user_email"
+                placeholder="Your email" required>
+
+              <!-- Helper text -->
+              <div id="emailHelp" class="form-text text-white mb-2">We'll never share your email with anyone else.</div>
+
+              <!-- Message textarea label -->
+              <label for="message" class="form-label text-white mb-1">Message:</label>
+
+              <!-- Message textarea -->
+              <textarea name="message" id="message" class="form-control rounded-0 mb-4" placeholder="Your message here"
+                spellcheck="true" rows="3" required></textarea>
+
+              <!-- Send button -->
+              <input type="submit" value="Send &#x27A4;" class="btn btn-light rounded-0">
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: #deded5;">
+
+    <!-- Footer container -->
+    <div class="container p-4">
+      <div class="row">
+
+        <div class="col-lg-6 col-md-12 mb-4">
+
+          <!-- Footer section header -->
+          <h5 class="mb-3 camouflage_green" style="letter-spacing: 2px;">footer content</h5>
+
+          <!-- Footer section paragraph -->
+          <p class="dark-liver">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+            voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+
+        <!-- Footer links -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">links</h5>
+
+          <!-- Links -->
+          <ul class="list-unstyled mb-0">
+
+            <!-- Who we are -->
+            <li class="mb-1">
+              <a href="who_we_are.html" style="color: #4f4f4f;">Who we are</a>
+            </li>
+
+            <!-- What we do -->
+            <li class="mb-1">
+              <a href="what_we_do.html" style="color: #4f4f4f;">What we do</a>
+            </li>
+
+            <!-- Why Ireland -->
+            <li class="mb-1">
+              <a href="why_ireland.html" style="color: #4f4f4f;">Why Ireland</a>
+            </li>
+
+            <!-- FAQ -->
+            <li class="mb-1">
+              <a href="faq.html" style="color: #4f4f4f;">Frequently Asked Questions</a>
+            </li>
+
+            <!-- Follow Us -->
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Follow us on <i
+                  class="fa-brands fa-x-twitter link-underline"></i></a>
+            </li>
+
+            <!-- Contact us -->
+            <li>
+              <a href="contact_us_2.html" style="color: #4f4f4f;">Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opening hours -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">opening hours</h5>
+          <table class="table" style="color: #4f4f4f; border-color: #666;">
+            <tbody>
+              <tr>
+                <td>Mon - Fri:</td>
+                <td>10am - 6pm</td>
+              </tr>
+              <tr>
+                <td>Sat - Sun:</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-">
+          <p>Project Enable</p>
+          <p>Registered address: 185 Rathmines Road Lower, Rathmines, Dublin 6, D06 YW56</p>
+          <p>Company registration number: 606311</p>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- Copyright div -->
+    <div class="text-center text-white p-3" style="background-color: #212529">
+      © <span id="year"></span> Copyright Project Enable
+    </div>
+
+  </footer>
+
+  <!-- Bootsrtap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+
+  <!-- Javascript file -->
+  <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
